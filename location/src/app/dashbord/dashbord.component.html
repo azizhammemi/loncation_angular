@@ -1,0 +1,40 @@
+<section id="home">
+
+      <br><br><br><br> <br><br><br>     
+
+<div class="you">
+  <div>
+    <h1>Car allouer</h1>
+<canvas baseChart
+  [type]="'pie'"
+  [datasets]="pieChartDatasets"
+  [labels]="pieChartLabels"
+  [options]="pieChartOptions"
+  [plugins]="pieChartPlugins"
+  [legend]="pieChartLegend">
+</canvas>
+</div>
+<div><h1>utilisateur combien allouer</h1>
+
+  <canvas baseChart width="400" height="400"
+    [type]="'line'"
+    [data]="lineChartData"
+    [options]="lineChartOptions"
+    [legend]="lineChartLegend">
+  </canvas>
+
+
+</div>
+<div>
+  <h1>car disponibiliter</h1>
+  <canvas baseChart
+        [datasets]="polarAreaChartDatasets"
+        [labels]="polarAreaChartLabels"
+        [legend]="polarAreaLegend"
+        [options]="polarAreaOptions"
+        [type]="'polarArea'">
+</canvas>
+</div>
+</div>
+  
+</section>

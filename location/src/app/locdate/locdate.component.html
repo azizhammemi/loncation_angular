@@ -1,0 +1,17 @@
+<section *ngIf="locations.length > 0" class="modal-wrapper">
+    <div class="modal-content">
+        <div class="container">
+            <h2>Location Reservations</h2>
+            <span class="close" (click)="closeModal()">&times;</span>
+            <ul  *ngFor="let location of locations">
+                <li>
+                    <p>Date début: {{ location.dateDebut }}</p>
+                  
+                </li>
+                <li>  <p>Date fin: {{ location.dateFin }}</p></li>
+                <li>    <img [src]="location.image" alt="Car Image" width="50" height="50"/>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>

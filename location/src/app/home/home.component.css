@@ -1,0 +1,147 @@
+.slider {
+    overflow: hidden;
+    width: 80%; /* Adjust width as needed */
+    margin: 0 auto; /* Center the slider horizontally */
+  }
+  
+  .slides {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+  
+  .slide {
+    flex: 0 0 100%;
+  }
+  
+  button {
+    margin-top: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  p{
+    justify-content: center;
+  }
+  /* app.component.css */
+.typewriter p {
+  display: inline-block;
+  overflow: hidden;       /* Ensures the text stays within the element */
+  white-space: nowrap;    /* Prevents text from wrapping */
+  border-right: 4px solid black; /* Creates the typewriter cursor effect */
+  animation: typing 6s steps(100, end), blink-caret 0.75s step-end infinite;
+}
+
+/* Typing animation */
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+/* Blinking cursor animation */
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: black; }
+}
+.service{
+  padding-top: 10%;
+}
+button a{
+  color: #fff;
+}
+.welcome-btn{
+  color: #fff;
+}
+
+
+
+.clients-say .testimonial-carousel {
+  display: flex;
+
+}
+
+
+
+
+
+
+.brand .brand-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.brand .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.brand .brand-area {
+  overflow: hidden;
+}
+
+.carousel-container {
+  width: 80%;
+  margin: 0 auto;
+  overflow: hidden; /* Hide overflow to clip the images */
+}
+
+.carousel {
+  display: flex;
+  padding-left: 10%;
+}
+
+.carousel img {
+  width: 33.33%; /* Display three images per slide */
+  height: auto;
+}
+
+.controls {
+  margin-top: 10px;
+  text-align: center;
+}
+
+
+
+/* styles.css */
+
+.image-slider-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-slider {
+  text-align: center;
+}
+
+.image-slider img {
+  max-width: 100%;
+  max-height: 300px; /* Adjust height as needed */
+}
+
+.dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dot {
+  display: inline-block;
+  height: 10px;
+  width: 10px;
+  background-color: #bbb;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: #333;
+}

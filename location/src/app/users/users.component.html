@@ -1,0 +1,29 @@
+
+<section id="home" >
+    <div class="container">
+        <div class="welcome-hero-txt">
+            <div class="car">
+                <table id="navbar-menu" >
+                    
+                    <thead style="padding-left: 5%;">
+                        <tr class="scroll" >
+                            <th>email</th>
+                            <th>role</th>
+                            <th>telephone</th>
+                            <th>adresse</th>
+                        </tr>
+                    </thead>
+                    <tbody *ngFor="let user of userss">
+                        <tr class="scroll" >
+                            <td>{{ user.email }}</td>
+                            <td>{{ user.role }}</td>
+                            <td>{{ user.telephone }}</td>
+                            <td>{{ user.adresse }}</td>
+                          
+                        </tr>
+                    <tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    </section>

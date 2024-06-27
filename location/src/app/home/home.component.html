@@ -1,0 +1,336 @@
+<section id="home" class="welcome-hero">
+<div class="container">
+    <div class="welcome-hero-txt">
+        <div class="typewriter">
+
+        <h2> LocaPrestige</h2>
+        <p>
+            route tounisie km 9 ,apres le mall votre voiture dans mon yeux apple :+06321654789
+        </p>
+        </div>
+        <button class="welcome-btn" onclick="window.location.href='#'">contact us</button>
+    </div>
+</div>
+
+</section>
+	<!--service start -->
+    <section id="service" class="service">
+        <div class="container">
+            <div class="section-header">
+                <p>Notre <span>the</span> latest cars</p>
+                <h2>Notre service</h2>
+            </div><!--/.section-header-->
+            <br>
+            <div class="service-content">
+                <div class="row">
+                    <div class="col-md-4 col-sm-6">
+                        <div class="single-service-item">
+                            <div class="single-service-icon">
+                                <i class="flaticon-car"></i>
+                            </div>
+                            <h2><a href="#">largest dealership <span> of</span> car</a></h2>
+                            <p>
+                                Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut den fugit sed quia.  
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="single-service-item">
+                            <div class="single-service-icon">
+                                <i class="flaticon-car-repair"></i>
+                            </div>
+                            <h2><a href="#">unlimited repair warrenty</a></h2>
+                            <p>
+                                Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut den fugit sed quia.  
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="single-service-item">
+                            <div class="single-service-icon">
+                                <i class="flaticon-car-1"></i>
+                            </div>
+                            <h2><a href="#">insurence support</a></h2>
+                            <p>
+                                Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut den fugit sed quia. 
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!--/.container-->
+        <section id="new-cars" class="new-cars">
+            <div class="container">
+                <div class="section-header">
+                    <p>checkout <span>the</span> latest cars</p>
+                    <h2>newest cars</h2>
+                </div><!--/.section-header-->
+               <!--cars-content-->
+               <div class="slider">
+                <div class="slides" [style.transform]="'translateX(-' + currentSlideIndex * 100 + '%)'">
+                  <div class="slide" *ngFor="let slide of slides">
+                    <img [src]="slide.image" [alt]="slide.alt">
+                    <h2>{{ slide.title }}</h2>
+                    <p>{{ slide.description }}</p>
+                  </div>
+                </div>
+                <button (click)="previousSlide()">Previous</button>
+                <button (click)="nextSlide()">Next</button>
+              </div>
+              
+            </div><!--/.container-->
+        </section><!--/.new-cars-->
+        
+
+    <!--featured-cars start -->
+    <section id="featured-cars" class="featured-cars">
+        <div class="container">
+            <div class="section-header">
+                <p>Menu <span>de</span> Voiture</p>
+                <h2>Voiture ajourd'hui</h2>
+            </div><!--/.section-header-->
+            <div class="featured-cars-content">
+                <div class="row" >
+                    
+                  
+                    <div class="col-lg-3 col-md-4 col-sm-6" *ngFor="let voi of disponibleCars">
+                        <div class="single-featured-cars">
+                            <div class="featured-img-box">
+                                <div class="featured-cars-img">
+                                    <img :src="{{voi.image}}" alt="{{voi.Marque}}" />
+                                </div>
+                                <div class="featured-model-info">
+                                    <p>
+                                      boit:  
+                                        <span class="featured-mi-span"> automatic</span> 
+                                         
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="featured-cars-txt">
+                                <h2><a href="#">{{voi.Marque}}</a></h2>
+                                <h3>Prix jour:  {{voi.prix}}</h3>
+                                <button><a [routerLink]="['/reservation', voi._id]">Allouer</a>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!--/.container-->
+
+    </section><!--/.featured-cars-->
+    <!--featured-cars end -->
+
+    <!-- clients-say strat -->
+    <section id="clients-say"  class="clients-say">
+        <div class="service-content">
+
+        <div class="container">
+            <div class="section-header">
+                <h2>what our clients say</h2>
+            </div><!--/.section-header-->
+            <div class="row">
+                <div class="owl-carousel testimonial-carousel">
+                    <div class="col-sm-3 col-xs-12">
+                            <div class="single-service-item">
+                                <div class="testimonial-info">
+                                    <div class="testimonial-img">
+                                        <img src="assets/images/clients/c1.png" alt="image of clients person" />
+                                    </div><!--/.testimonial-img-->
+                                </div><!--/.testimonial-info-->
+                                <div class="testimonial-comment">
+                                    <p>
+                                        Sed ut pers unde omnis iste natus error sit voluptatem accusantium dolor laudan rem aperiam, eaque ipsa quae ab illo inventore verit. 
+                                    </p>
+                                </div><!--/.testimonial-comment-->
+                                <div class="testimonial-person">
+                                    <h2><a href="#">tomas lili</a></h2>
+                                    <h2><a href="#">new york</a></h2>
+                                </div><!--/.testimonial-person-->
+                            </div><!--/.testimonial-description-->
+                    </div><!--/.col-->
+                    <div class="col-sm-3 col-xs-12">
+                  
+                            <div class="single-service-item">
+                                <div class="testimonial-info">
+                                    <div class="testimonial-img">
+                                        <img src="assets/images/clients/c2.png" alt="image of clients person" />
+                                    </div><!--/.testimonial-img-->
+                                </div><!--/.testimonial-info-->
+                                <div class="testimonial-comment">
+                                    <p class="h">
+                                        Sed ut pers unde omnis iste natus error sit voluptatem accusantium dolor laudan rem aperiam, eaque ipsa quae ab illo inventore verit. 
+                                    </p>
+                                </div><!--/.testimonial-comment-->
+                                <div class="testimonial-person">
+                                    <h2><a href="#">romi rain</a></h2>
+                                    <h2><a href="#">london</a></h2>
+                                </div><!--/.testimonial-person-->
+                            </div><!--/.testimonial-description-->
+                    
+                    </div><!--/.col-->
+                    <div class="col-sm-3 col-xs-12">
+                            <div class="single-service-item">
+                                <div class="testimonial-info">
+                                    <div class="testimonial-img">
+                                        <img src="assets/images/clients/c3.png" alt="image of clients person" />
+                                    </div><!--/.testimonial-img-->
+                                </div><!--/.testimonial-info-->
+                                <div class="testimonial-comment">
+                                    <p>
+                                        Sed ut pers unde omnis iste natus error sit voluptatem accusantium dolor laudan rem aperiam, eaque ipsa quae ab illo inventore verit. 
+                                    </p>
+                                </div><!--/.testimonial-comment-->
+                                <div class="testimonial-person">
+                                    <h2><a href="#">john doe</a></h2>
+                                    <h2><a href="#">washington</a></h2>
+                                </div><!--/.testimonial-person-->
+                            </div><!--/.testimonial-description-->
+                    </div><!--/.col-->
+                </div><!--/.testimonial-carousel-->
+            </div><!--/.row-->
+        </div><!--/.container-->
+        </div>
+    </section><!--/.clients-say-->	
+    <!-- clients-say end -->
+
+    <!--brand strat -->
+ <!-- YourComponent.html -->
+<!-- image-slider.component.html -->
+<!-- home.component.html -->
+
+<div class="image-slider-container">
+    <div class="image-slider">
+        <img [src]="images[currentSlide].src" [alt]="images[currentSlide].alt" />
+      
+        <div class="dots">
+          <span *ngFor="let image of images; let i = index" 
+                class="dot" 
+                [class.active]="i === currentSlide" 
+                (click)="jumpToSlide(i)"></span>
+        </div>
+    </div>
+  </div>
+
+      
+      
+      
+      
+      
+   
+      <!--/brand-->	
+    <!-- clients-say end -->
+
+    <!--brand strat -->
+ 
+      
+    <!--brand end -->
+
+    <!--blog start -->
+    <section id="blog" class="blog"></section>
+    <footer id="contact"  class="contact">
+        <div class="container">
+            <div class="footer-top">
+                <div class="row">
+                    <div class="col-md-3 col-sm-6">
+                        <div class="single-footer-widget">
+                            <div class="footer-logo">
+                                <a href="index.html">carvilla</a>
+                            </div>
+                            <p>
+                                Ased do eiusm tempor incidi ut labore et dolore magnaian aliqua. Ut enim ad minim veniam.
+                            </p>
+                            <div class="footer-contact">
+                                <p>info@themesine.com</p>
+                                <p>+1 (885) 2563154554</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-sm-6">
+                        <div class="single-footer-widget">
+                            <h2>about devloon</h2>
+                            <ul>
+                                <li><a href="#">about us</a></li>
+                                <li><a href="#">career</a></li>
+                                <li><a href="#">terms <span> of service</span></a></li>
+                                <li><a href="#">privacy policy</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-xs-12">
+                        <div class="single-footer-widget">
+                            <h2>top brands</h2>
+                            <div class="row">
+                                <div class="col-md-7 col-xs-6">
+                                    <ul>
+                                        <li><a href="#">BMW</a></li>
+                                        <li><a href="#">lamborghini</a></li>
+                                        <li><a href="#">camaro</a></li>
+                                        <li><a href="#">audi</a></li>
+                                        <li><a href="#">infiniti</a></li>
+                                        <li><a href="#">nissan</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-5 col-xs-6">
+                                    <ul>
+                                        <li><a href="#">ferrari</a></li>
+                                        <li><a href="#">porsche</a></li>
+                                        <li><a href="#">land rover</a></li>
+                                        <li><a href="#">aston martin</a></li>
+                                        <li><a href="#">mersedes</a></li>
+                                        <li><a href="#">opel</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-offset-1 col-md-3 col-sm-6">
+                        <div class="single-footer-widget">
+                            <h2>news letter</h2>
+                            <div class="footer-newsletter">
+                                <p>
+                                    Subscribe to get latest news  update and informations
+                                </p>
+                            </div>
+                            <div class="hm-foot-email">
+                                <div class="foot-email-box">
+                                    <input type="text" class="form-control" placeholder="Add Email">
+                                </div><!--/.foot-email-box-->
+                                <div class="foot-email-subscribe">
+                                    <span><i class="fa fa-arrow-right"></i></span>
+                                </div><!--/.foot-email-icon-->
+                            </div><!--/.hm-foot-email-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <p>
+                            &copy; copyright.designed and developed by <a href="https://www.themesine.com/">themesine</a>.
+                        </p><!--/p-->
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="footer-social">
+                            <a href="#"><i class="fa fa-facebook"></i></a>	
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                            <a href="#"><i class="fa fa-linkedin"></i></a>
+                            <a href="#"><i class="fa fa-pinterest-p"></i></a>
+                            <a href="#"><i class="fa fa-behance"></i></a>	
+                        </div>
+                    </div>
+                </div>
+            </div><!--/.footer-copyright-->
+        </div><!--/.container-->
+
+        <div id="scroll-Top">
+            <div class="return-to-top">
+                <i class="fa fa-angle-up " id="scroll-top" data-toggle="tooltip" data-placement="top" title="" data-original-title="Back to Top" aria-hidden="true"></i>
+            </div>
+            
+        </div><!--/.scroll-Top-->
+        
+    </footer><!--/.contact-->
+   

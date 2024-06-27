@@ -1,0 +1,33 @@
+<section id="home" >
+    <div class="container">
+        <div class="welcome-hero-txt">
+            <div class="car">
+                <table id="navbar-menu" >
+                    
+                    <thead style="padding-left: 5%;">
+                        <tr class="scroll" >
+                            <th>dateDebut</th>
+                            <th>dateFin</th>
+                            <th>nom</th>
+                            <th>image</th>
+                            <th>nomcar</th>
+                            <th>numero</th>
+                        </tr>
+                    </thead>
+                    <tbody *ngFor="let loc of loca">
+                        <tr class="scroll" >
+                            <td>{{ loc.dateDebut }}</td>
+                            <td>{{ loc.dateFin }}</td>
+                            <td>{{ loc.nom }}</td>
+                            <td><img :src="{{loc.image}}" alt="{{loc.nomcar}}" width="200px" height="200px"/></td>
+
+                            <td>{{ loc.nomcar }}</td>
+                            <td>{{ loc.numero }}</td>
+                       
+                        </tr>
+                    <tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    </section>

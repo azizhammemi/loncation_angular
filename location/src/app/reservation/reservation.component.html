@@ -1,0 +1,39 @@
+<section id="home">
+    <div class="container">
+        <div class="welcome-hero-txt">
+            <div class="car">
+                <div class="form-container">
+                    <button (click)="openDeleteDialog()">Show list date reservation</button>
+
+                    <form (ngSubmit)="addLocation()">
+                        <div class="car-details">
+                            <img [src]="car?.image" alt="{{ car?.Marque }}" class="car-image">
+                            <h5>{{ car?.Marque }}   Prix: {{ car?.prix }}</h5>
+                           
+                            <div class="car-info">
+                              
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="dateDebut">Date début</label>
+                            <input type="date" id="dateDebut" name="dateDebut" [(ngModel)]="dateDebut" required/>
+                        </div>
+                        <div class="form-group">
+                            <label for="dateFin">Date fin</label>
+                            <input type="date" id="dateFin" name="dateFin" [(ngModel)]="dateFin" required/>
+                        </div>
+                        <div class="form-group">
+                            <label for="numero">Numéro:</label>
+                            <input type="text" id="numero" name="numero" [(ngModel)]="numero" required/>
+                        </div>
+                        <button type="button" (click)="confirmReservation()">Add Location</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <app-locdate *ngIf="showDeleteDialog" 
+        (deleteCancelled)="showDeleteDialog = false"
+        [carImage]="car?.image"
+        [locationss]="locations"></app-locdate>
+</section>

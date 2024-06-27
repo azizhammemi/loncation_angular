@@ -1,0 +1,32 @@
+<br><br><br><br>
+<div class="container">
+    <h2>{{ isEditMode ? 'Edit Voiture' : 'Add New Voiture' }}</h2>
+    <form (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="marque">Marque:</label>
+        <input type="text" id="marque" [(ngModel)]="voiture.Marque" name="Marque" required>
+      </div>
+      <div class="form-group">
+        <label for="image">Image URL:</label>
+        <input type="text" id="image" [(ngModel)]="voiture.image" name="image" required>
+      </div>
+      <div class="form-group">
+        <label for="couleur">Couleur:</label>
+        <input type="text" id="couleur" [(ngModel)]="voiture.Couleur" name="Couleur" required>
+      </div>
+      <div class="form-group">
+        <label for="prix">Prix:</label>
+        <input type="text" id="prix" [(ngModel)]="voiture.prix" name="prix" required>
+      </div>
+      <div class="form-group">
+        <label for="prix">Etat:</label>
+        <select id="etat" [(ngModel)]="voiture.etat" name="etat" >
+            <option>disponible</option>
+            <option>non-disponible</option>
+        </select>
+       
+      </div>
+      <button type="submit">{{ isEditMode ? 'Update Voiture' : 'Add Voiture' }}</button>
+    </form>
+  </div>
+  

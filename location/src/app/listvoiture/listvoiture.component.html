@@ -1,0 +1,30 @@
+<div class="card">
+    <p-table [value]="voitures" [tableStyle]="{'min-width': '60rem'}">
+        <ng-template pTemplate="caption">
+            <div class="flex align-items-center justify-content-between">
+                voitures
+                
+            </div>
+        </ng-template>
+        <ng-template pTemplate="header">
+            <tr>
+                <th>Marque</th>
+                <th>image</th>
+                <th>Couleur</th>
+                <th>prix</th>
+                <th>Reviews</th>
+                <th>Status</th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-Voiture>
+            <tr>
+                <td>{{Voiture.Marque}}</td>
+                <td>{{ Voiture.image }}</td>
+                <td>{{Voiture.Couleur }}</td>
+                <td>{{Voiture.prix}}</td>
+                
+            </tr>
+        </ng-template>
+       
+    </p-table>
+</div>
